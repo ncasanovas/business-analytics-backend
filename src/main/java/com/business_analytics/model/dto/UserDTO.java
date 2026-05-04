@@ -1,10 +1,15 @@
-package com.business_analytics.dto;
+package com.business_analytics.model.dto;
 
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 public class UserDTO {
 
   private String email;
+
+  @JsonProperty(access = Access.WRITE_ONLY)
   private String password;
   private LocalDateTime createdAt;
   private LocalDateTime updtedAt;
@@ -20,7 +25,7 @@ public class UserDTO {
     return email;
   }
 
-  public void setName(String email) {
+  public void setEmail(String email) {
     this.email = email;
   }
 

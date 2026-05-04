@@ -1,4 +1,4 @@
-package com.business_analytics.entity;
+package com.business_analytics.model.entity;
 
 import java.time.LocalDateTime;
 

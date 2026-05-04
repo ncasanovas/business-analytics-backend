@@ -1,11 +1,11 @@
-package com.business_analytics.entity;
+package com.business_analytics.model.entity;
 
 import java.time.LocalDateTime;
 
-import jakarta.persistence.Column;
+import org.springframework.data.annotation.Id;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,19 +13,15 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "order")
-public class Order {
+@Table(name = "users")
+public class User {
 
   @Id @GeneratedValue
   private Integer id;
 
-  @Column(name="user_id") 
-  private Integer userId;
-
-   @Column(name="total_amount") 
-  private Double totalAmount;
-
-  @Column(name="created_at") 
+  private String email;
+  private String password;
   private LocalDateTime createdAt;
+  private LocalDateTime updtedAt;
   
 }

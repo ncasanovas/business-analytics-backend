@@ -1,6 +1,4 @@
-package com.business_analytics.entity;
-
-import java.time.LocalDateTime;
+package com.business_analytics.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

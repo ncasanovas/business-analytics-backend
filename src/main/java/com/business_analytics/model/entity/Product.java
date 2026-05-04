@@ -1,4 +1,4 @@
-package com.business_analytics.entity;
+package com.business_analytics.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,11 +13,12 @@ import lombok.Setter;
 @Table(name = "products")
 public class Product {
 
-  @Id @GeneratedValue
+  @Id
+  @GeneratedValue
   private Integer id;
 
   private String name;
   private String category;
   private Double price;
-  
+
 }

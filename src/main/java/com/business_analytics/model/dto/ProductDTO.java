@@ -1,4 +1,4 @@
-package com.business_analytics.dto;
+package com.business_analytics.model.dto;
 
 public class ProductDTO {
 
