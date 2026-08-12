@@ -1,17 +1,13 @@
 package com.business_analytics.model.dto;
 
-import java.time.LocalDateTime;
-
-import jakarta.persistence.Column;
-
 public class OrderItemsDTO {
 
-  private Integer orderId;
-  private Integer productId;
+  private Long orderId;
+  private Long productId;
   private Integer quantity;
   private Double price;
 
-  public OrderItemsDTO(Integer orderId, Integer productId, Integer quantity, Double price) {
+  public OrderItemsDTO(Long orderId, Long productId, Integer quantity, Double price) {
     this.orderId = orderId;
     this.productId = productId;
     this.quantity = quantity;
@@ -19,19 +15,19 @@ public class OrderItemsDTO {
   }
 
   // Getters and Setters
-  public Integer getOrderId() {
+  public Long getOrderId() {
     return orderId;
   }
 
-  public void setOrderId(Integer orderId) {
+  public void setOrderId(Long orderId) {
     this.orderId = orderId;
   }
 
-  public Integer getProductId() {
+  public Long getProductId() {
     return productId;
   }
 
-  public void setProductId(Integer productId) {
+  public void setProductId(Long productId) {
     this.productId = productId;
   }
 

@@ -2,26 +2,24 @@ package com.business_analytics.model.dto;
 
 import java.time.LocalDateTime;
 
-import jakarta.persistence.Column;
-
 public class OrderDTO {
 
-  private Integer userId;
+  private Long userId;
   private Double totalAmount;
   private LocalDateTime createdAt;
 
-  public OrderDTO(Integer userId, Double totalAmount, LocalDateTime createdAt) {
+  public OrderDTO(Long userId, Double totalAmount, LocalDateTime createdAt) {
     this.userId = userId;
     this.totalAmount = totalAmount;
     this.createdAt = createdAt;
   }
 
   // Getters and Setters
-  public Integer getUserId() {
+  public Long getUserId() {
     return userId;
   }
 
-  public void setUserId(Integer userId) {
+  public void setUserId(Long userId) {
     this.userId = userId;
   }
 
