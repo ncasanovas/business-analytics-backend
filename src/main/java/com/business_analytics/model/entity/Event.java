@@ -4,7 +4,10 @@ import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
@@ -16,14 +19,20 @@ import lombok.Setter;
 @Table(name = "events")
 public class Event {
 
-  @Id
-  @GeneratedValue
-  private Integer id;
+  public enum EventType {
+    PAGE_VIEW, SIGNUP, LOGIN, PURCHASE,
 
-  private String type;
+  }
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  @Enumerated(EnumType.STRING)
+  private EventType eventType;
 
   @Column(name = "user_id")
-  private Integer userId;
+  private Long userId;
 
   @Column(name = "created_at")
   private LocalDateTime createdAt;
