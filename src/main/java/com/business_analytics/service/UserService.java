@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.business_analytics.model.dto.UserDTO;
-import com.business_analytics.model.entity.User;
 import com.business_analytics.model.mapper.UserMapper;
 import com.business_analytics.repository.UserRepository;
 

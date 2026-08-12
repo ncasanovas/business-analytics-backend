@@ -12,7 +12,7 @@ public class UserDTO {
   @JsonProperty(access = Access.WRITE_ONLY)
   private String password;
   private LocalDateTime createdAt;
-  private LocalDateTime updtedAt;
+  private LocalDateTime updatedAt;
 
   public UserDTO(String email, String password, LocalDateTime createdAt) {
     this.email = email;
@@ -37,11 +37,19 @@ public class UserDTO {
     this.password = password;
   }
 
-   public LocalDateTime getCreatedAt() {
+  public LocalDateTime getCreatedAt() {
     return createdAt;
   }
 
   public void setCreatedAt(LocalDateTime createdAt) {
     this.createdAt = createdAt;
+  }
+
+  public LocalDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(LocalDateTime updatedAt) {
+    this.updatedAt = updatedAt;
   }
 }
