@@ -17,5 +17,13 @@ public interface OrderRepository extends JpaRepository<Order, Long>{
         GROUP BY DATE(o.createdAt)
     """)
     List<Object[]> getRevenueByDate(LocalDateTime from, LocalDateTime to);
+
+      @Query("""
+        SELECT DATE(o.createdAt), COUNT(*)
+        FROM Order o
+        WHERE o.createdAt BETWEEN :from AND :to
+        GROUP BY DATE(o.createdAt)
+    """)
+    int getAmountOrdersByDate(LocalDateTime from, LocalDateTime to);
   
 }
